@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+        .logo{
+            display: block;
+            margin: 72px auto;
+        }
+        .timer{
+            width: 400px;
+            height: 360px;
+            margin: 60px auto;
+            margin-bottom: calc(100vh - 540px);
+
+            /* gradient */
+            background: linear-gradient(144.07deg, #5572BB 2.13%, #374B7C 102.97%);
+
+            /* shadow */
+            box-shadow: 20px 20px 60px 10px rgba(55, 75, 124, 0.4);
+            border-radius: 16px;
+        }
+        .title{
+            padding-top: 48px;
+            padding-bottom: 23px;
+            color: white;
+            text-align: center;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+        }
+        .sec-button{
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+        #start::before{
+            content: url(img/icon-start-disabled.png);
+            margin-right: 5px;
+        }
+        #reset::before{
+            content: url(img/icon-reset-disabled.png);
+            margin-right: 5px;
+        }
+        .sec-time{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+        .box{
+            height: 80px;
+            width: 80px;
+            border-radius: 4px;
+            background: linear-gradient(314.28deg, #304577 0%, #4C65A0 83%);
+            border: 1px solid #354971;
+            border-radius: 4px;
+        }
+        .dot{
+            width: 6px;
+            height: 26px;
+        }
+        
+        button{
+            padding: 16px 23px 15px 23px;
+            background: #324577;
+            box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.05);
+            border-radius: 50px;
+            font-family: 'Pretendard';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            color: #617199;
+        }
+        h3{
+            font-family: 'Pretendard';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+            color: #A5B6EE;
+        }
+    </style>
+</head>
+<body>
+    <img class="logo" src="img/weniv-logo.png" alt="위니브 로고">
+    <main class="timer">
+        <section class="sec-title">
+            <h2 class="title">TIMER</h2>
+        </section>
+        <section class="sec-time">
+            <div>
+                <h3>HRS</h3>
+                <div id="hour" class="box"></div>
+            </div>
+            <img class="dot" src="img/dot.png">
+            <div>
+                <h3>MIN</h3>
+                <div id="minute" class="box"></div>
+            </div>
+            <img class="dot" src="img/dot.png">
+            <div>
+                <h3>SEC</h3>
+                <div id="second" class="box"></div>
+            </div>
+        </section>
+        <section class="sec-button">
+            <button id="start">START</button>
+            <button id="reset">RESET</button>
+        </section>
+    </main>
+</body>
+</html>
